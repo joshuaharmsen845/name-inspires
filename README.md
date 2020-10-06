@@ -15,4 +15,12 @@ This part is consists of verbs that are going to be used as part of the naming c
 | Get      | fetch resource as expected in a suitable form for the specific part of the execution                        | Fully prepared data if exists **OTHERWISE** throws an exception if it should exist but doesn't                                                             | GetResponse, GetUserEmail, GetDatabaseConnection, GetSanitizedString, GetQueryLog, GetHttp, GetContext | NEED CONTRIBUTION                                                   |
 | Set      | Store (or config) specific resource                                                                         | Boolean indicates that resource was stored correctly or not **OTHERWISE** Throw an exception in case of misbehaving.                                       | SetBackOfJitterConnection, SetSession, SetFilter, SetFirstNameAttribute                                | SetData: It does not indicate what kind of data is going to be set. |
 | Unset    | Returns the source to its initial state. The initial state can also indicate the destruction of the source. | The source before it deletion **OR** a boolean indicates the resource was unset or not. **OTHERWISE** an exception will be raised if misbehaving accuered. | UnsetCardNumber, UnsetBearerToken, UnsetApiThrottlingCounter, UnsetProxyWatcher, UnsetCookies          | _NEED CONTRIBUTION_                                                 |
+| Has      | Tells whether some data structure has the specified element
+| Boolean indicating whether the element was found or not.
+| HasInteger, HasString, HasChar
+| Has: Not specific in what we are searching for |
+| Replace  | Replaces an element in some data structure with another element
+| Returns a boolean whether the element was successfully replaced
+| ReplaceAtIndex, ReplaceAll, ReplaceFirst
+| Replace: Doesn't specify what we will be replacing, and whether that is an index or a value |
 | **Name** | **Guess Functionality**                                                                                     | **Guess Return Type**                                                                                                                                      | **Good Naming Examples**                                                                               | **Bad Naming Example**                                              |
